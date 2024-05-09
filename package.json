@@ -5,12 +5,16 @@
   "main": "index.js",
   "scripts": {
     "compile": "tsc ./src/*.ts",
+    "bundle": "pnpm run compile && pnpm run bundle:dist",
+    "bundle:dist": "parcel build ./src/index.js --dist-dir ./dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "parcel": "^2.12.0",
+    "typescript": "^5.4.5",
     "vitest": "^1.6.0"
   }
 }
