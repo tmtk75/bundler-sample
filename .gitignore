@@ -1,5 +1,4 @@
 node_modules
 .*.swp
 src/*.js
-.parcel-cache
 dist
