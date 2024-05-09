@@ -4,11 +4,11 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "compile": "tsc ./src/*.ts",
+    "compile": "tsc -p .",
     "bundle": "pnpm run compile && pnpm run bundle:dist",
     "bundle:dist": "rollup -c --bundleConfigAsCjs",
     "test": "vitest",
-    "clean": "rm -rf ./dist"
+    "clean": "rm -rf ./dist && rm ./src/*.js"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +19,7 @@
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@types/node": "^20.12.11",
     "axios": "^1.6.8",
+    "dayjs": "^1.11.11",
     "rollup": "^4.17.2",
     "typescript": "^5.4.5",
     "vitest": "^1.6.0"
