@@ -1,0 +1,7 @@
+{
+    "files.exclude": {
+        "**/.*.swp": true,
+        "dist": true,
+        "src/*.js": true
+    }
+}
