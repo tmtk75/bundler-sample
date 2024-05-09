@@ -1,12 +1,12 @@
 {
-  "name": "bundle-sample",
+  "name": "bundler-sample",
   "version": "0.1.0",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
     "compile": "tsc -p .",
-    "bundle": "pnpm run compile && pnpm run bundle:dist",
-    "bundle:dist": "rollup -c --bundleConfigAsCjs",
+    "bundle:rollup": "pnpm run compile && pnpm run bundle:rollup:dist",
+    "bundle:rollup:dist": "rollup -c --bundleConfigAsCjs",
     "test": "vitest",
     "clean": "rm -rf ./dist && rm ./src/*.js"
   },
@@ -23,5 +23,9 @@
     "rollup": "^4.17.2",
     "typescript": "^5.4.5",
     "vitest": "^1.6.0"
+  },
+  "packageManager": "pnpm@8.15.6",
+  "engines": {
+    "node": ">=20"
   }
 }
