@@ -9,7 +9,6 @@ Now two bundler tools are supported:
 ## Overview
 This repository gives a simple project to demonstrate how to use bundler tools with TypeScript.
 
-
 ## Installation
 To set up the project, clone the repository and install the dependencies:
 
@@ -26,12 +25,25 @@ pnpm install
 ```bash
 pnpm run build:rollup
 ```
+rollup is configured like:
+* bundle
+  - own library code.
+  - dayjs.
+* exclude
+  - axios.
+
 
 ### parcel
 ```bash
 pnpm run build:parcel
 ```
 Note: now this command crashes unfortunately with segmentation fault. It seems a parcel's glitch.
+
+
+## Run
+```bash
+node dist/index.js
+```
 
 
 ## Testing
