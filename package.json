@@ -5,9 +5,11 @@
   "main": "dist/index.js",
   "scripts": {
     "compile": "tsc -p .",
+    "test": "vitest",
     "bundle:rollup": "pnpm run compile && pnpm run bundle:rollup:dist",
     "bundle:rollup:dist": "rollup -c --bundleConfigAsCjs",
-    "test": "vitest",
+    "bundle:parcel": "pnpm run compile && pnpm run bundle:parcel:dist",
+    "bundle:parcel:dist": "parcel build src/index.js",
     "clean": "rm -rf ./dist && rm ./src/*.js"
   },
   "keywords": [],
@@ -18,8 +20,7 @@
     "@rollup/plugin-json": "^6.1.0",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@types/node": "^20.12.11",
-    "axios": "^1.6.8",
-    "dayjs": "^1.11.11",
+    "parcel": "^2.12.0",
     "rollup": "^4.17.2",
     "typescript": "^5.4.5",
     "vitest": "^1.6.0"
@@ -27,5 +28,9 @@
   "packageManager": "pnpm@8.15.6",
   "engines": {
     "node": ">=20"
+  },
+  "dependencies": {
+    "axios": "^1.6.8",
+    "dayjs": "^1.11.11"
   }
 }

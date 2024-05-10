@@ -31,6 +31,7 @@ pnpm run build:rollup
 ```bash
 pnpm run build:parcel
 ```
+Note: now this command crashes unfortunately with segmentation fault. It seems a parcel's glitch.
 
 
 ## Testing
